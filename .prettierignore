@@ -1,0 +1,21 @@
+# Ignore built files
+build/
+dist/
+out/
+public/
+
+# Ignore test files
+*.test.js
+*.spec.js
+
+# Ignore configuration files
+.eslintrc.js
+.prettierrc.js
+
+# Ignore Node.js modules
+node_modules/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
