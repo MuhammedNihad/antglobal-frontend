@@ -31,6 +31,9 @@ export const NavigationBar = () => {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
         className="rounded-lg bg-accent-200"
+        classNames={{
+          wrapper: ["px-4"],
+        }}
       >
         <NavbarContent className="gap-2 md:gap-3" justify="end">
           <NavbarMenuToggle
