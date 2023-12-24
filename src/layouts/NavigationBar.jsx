@@ -51,7 +51,7 @@ export const NavigationBar = () => {
           </NavbarBrand>
           <Input
             classNames={{
-              base: "max-w-full sm:max-w-[30rem] h-12",
+              base: "max-w-full sm:max-w-[30rem] h-10 md:h-12",
               mainWrapper: "h-full",
               input: "text-small",
               inputWrapper:
