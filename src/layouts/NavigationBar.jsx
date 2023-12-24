@@ -32,7 +32,7 @@ export const NavigationBar = () => {
         onMenuOpenChange={setIsMenuOpen}
         className="rounded-lg bg-accent-200"
       >
-        <NavbarContent className="gap-4" justify="end">
+        <NavbarContent className="gap-2 md:gap-3" justify="end">
           <NavbarMenuToggle
             className="md:hidden"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
