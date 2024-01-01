@@ -58,7 +58,7 @@ export const NavigationBar = () => {
               mainWrapper: "h-full",
               input: "text-small",
               inputWrapper:
-                "h-full font-normal text-default-500 bg-secondary-200 dark:bg-secondary-300/",
+                "h-full font-normal text-default-500 bg-secondary-200 rounded-xl lg:rounded-2xl dark:bg-secondary-300/",
             }}
             placeholder="Search for products..."
             size="sm"
