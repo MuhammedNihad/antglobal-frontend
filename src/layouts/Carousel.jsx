@@ -24,6 +24,7 @@ export const Carousel = () => {
       style={{
         "--swiper-pagination-color": "#fff",
       }}
+      className="rounded-3xl"
     >
       {/* TODO: Replace placeholder images */}
       <SwiperSlide>
