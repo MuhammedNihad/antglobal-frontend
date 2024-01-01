@@ -30,7 +30,7 @@ export const NavigationBar = () => {
         maxWidth="xl"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="rounded-lg bg-accent-200"
+        className="rounded-3xl bg-accent-200"
         classNames={{
           wrapper: ["px-4"],
         }}
