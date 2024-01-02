@@ -5,13 +5,11 @@ import { CategoryCarousel } from "./layouts/CategoryCarousel";
 
 function App() {
   return (
-    <>
+    <div className="m-3 lg:mx-10">
       <NavigationBar />
-      <div className="p-3 lg:px-10">
-        <Carousel />
-      </div>
+      <Carousel />
       <CategoryCarousel />
-    </>
+    </div>
   );
 }
 
