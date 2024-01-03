@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "@phosphor-icons/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -146,13 +147,21 @@ export const CategoryCarousel = () => {
       >
         {categories.map((item, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={item.image}
-              alt={item.alt}
-              height={150}
-              width={150}
-              className="object-cover h-36 w-36 rounded-3xl"
-            />
+            <div className="relative h-36 w-36">
+              <img
+                src={item.image}
+                alt={item.alt}
+                height={150}
+                width={150}
+                className="object-cover h-36 w-36 rounded-3xl"
+              />
+              <div className="absolute inline-flex items-center p-2 bg-white shadow-md rounded-3xl right-2 top-2">
+                <ArrowUpRight
+                  size={20}
+                  alt="Arrow up icon on category item image"
+                />
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
