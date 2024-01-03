@@ -91,7 +91,7 @@ export const CategoryCarousel = () => {
 
   return (
     <section className="flex flex-row p-3 rounded-3xl bg-accent-200 lg:px-10">
-      <div className="flex items-center  w-[568px]-1/3 sm:w-1/4 md:w-1/3 lg:w-1/5">
+      <div className="flex items-center">
         <h3 className="flex flex-col p-2 space-y-1 text-base font-bold leading-6 capitalize text-dark-600 md:p-4">
           <span>Browse</span>
           <span>by</span>
@@ -142,7 +142,7 @@ export const CategoryCarousel = () => {
             slidesPerView: 9,
           },
         }}
-        className="w-[568px]-2/3 sm:w-3/4 lg:w-4/5 md:w-2/3 xl:w-[120%] rounded-3xl"
+        className="rounded-3xl"
       >
         {categories.map((item, index) => (
           <SwiperSlide key={index}>
