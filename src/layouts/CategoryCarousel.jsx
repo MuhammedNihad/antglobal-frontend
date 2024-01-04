@@ -1,10 +1,6 @@
-import { ArrowUpRight } from "@phosphor-icons/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/pagination";
+import { ArrowUpRight, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
 /**
  * Renders the Category component.
@@ -89,18 +85,46 @@ export const CategoryCarousel = () => {
       alt: "Alt text",
     },
   ];
+  const swiper = useSwiper();
 
   return (
     <section className="flex flex-row p-3 rounded-3xl bg-accent-200 lg:px-10">
-      <div className="flex items-center">
-        <h3 className="flex flex-col p-2 space-y-1 text-base font-bold leading-6 capitalize text-dark-600 md:p-4">
+      <div className="flex flex-col items-center justify-center gap-3 px-2 pb-0 md:px-4">
+        <h3 className="flex flex-col space-y-1 text-base font-bold leading-6 capitalize text-dark-600">
           <span>Browse</span>
           <span>by</span>
           <span>category</span>
         </h3>
+        <div className="inline-flex gap-1">
+          <button
+            onClick={() => swiper.slidePrev()}
+            className="items-center p-2 bg-white shadow-md group rounded-3xl right-2 top-2 swiper-button-prev hover:bg-black"
+          >
+            <ArrowLeft
+              size={20}
+              alt="Previous button of categories"
+              className="text-black group-hover:text-white"
+            />
+          </button>
+          <button
+            onClick={() => swiper.slideNext()}
+            className="items-center p-2 bg-white shadow-md group rounded-3xl right-2 top-2 swiper-button-next hover:bg-black"
+          >
+            <ArrowRight
+              size={20}
+              alt="Next button of categories"
+              className="text-black group-hover:text-white"
+            />
+          </button>
+        </div>
       </div>
       {/* TODO: Add real categories from API with absolute url to category item detail page */}
       <Swiper
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        modules={[Navigation]}
         // Default parameters
         slidesPerView={1}
         spaceBetween={5}
