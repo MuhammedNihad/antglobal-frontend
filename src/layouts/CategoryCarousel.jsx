@@ -120,6 +120,7 @@ export const CategoryCarousel = () => {
       </div>
       {/* TODO: Add real categories from API with absolute url to category item detail page */}
       <Swiper
+        loop
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
