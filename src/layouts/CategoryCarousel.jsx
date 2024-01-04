@@ -88,9 +88,9 @@ export const CategoryCarousel = () => {
   const swiper = useSwiper();
 
   return (
-    <section className="flex flex-row gap-8 p-3 rounded-3xl bg-accent-200 lg:px-10">
+    <section className="flex flex-row gap-8 rounded-3xl bg-accent-200 p-3 lg:px-10">
       <div className="flex flex-col items-center justify-center gap-3">
-        <h3 className="flex flex-col space-y-1 text-lg font-bold leading-6 capitalize text-dark-600">
+        <h3 className="text-dark-600 flex flex-col space-y-1 text-lg font-bold capitalize leading-6">
           <span>Browse</span>
           <span>by</span>
           <span>category</span>
@@ -98,7 +98,7 @@ export const CategoryCarousel = () => {
         <div className="inline-flex gap-1">
           <button
             onClick={() => swiper.slidePrev()}
-            className="items-center p-2 bg-white shadow-md group rounded-3xl right-2 top-2 swiper-button-prev hover:bg-black"
+            className="swiper-button-prev group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-black"
           >
             <ArrowLeft
               size={20}
@@ -108,7 +108,7 @@ export const CategoryCarousel = () => {
           </button>
           <button
             onClick={() => swiper.slideNext()}
-            className="items-center p-2 bg-white shadow-md group rounded-3xl right-2 top-2 swiper-button-next hover:bg-black"
+            className="swiper-button-next group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-black"
           >
             <ArrowRight
               size={20}
@@ -178,9 +178,9 @@ export const CategoryCarousel = () => {
                 alt={item.alt}
                 height={150}
                 width={150}
-                className="object-cover h-36 w-36 rounded-3xl"
+                className="h-36 w-36 rounded-3xl object-cover"
               />
-              <div className="absolute inline-flex items-center p-2 bg-white shadow-md rounded-3xl right-2 top-2">
+              <div className="absolute right-2 top-2 inline-flex items-center rounded-3xl bg-white p-2 shadow-md">
                 <ArrowUpRight
                   size={20}
                   alt="Arrow up icon on category item image"
