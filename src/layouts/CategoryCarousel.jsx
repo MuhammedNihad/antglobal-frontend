@@ -126,52 +126,12 @@ export const CategoryCarousel = () => {
           prevEl: ".swiper-button-prev",
         }}
         modules={[Navigation]}
-        // Default parameters
-        slidesPerView={1}
+        slidesPerView={"auto"}
         spaceBetween={5}
-        // Responsive breakpoints
-        breakpoints={{
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 2,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 3,
-          },
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 4,
-          },
-          // when window width is >= 1024px
-          1024: {
-            slidesPerView: 5,
-          },
-          // when window width is >= 1280px
-          1280: {
-            slidesPerView: 6,
-          },
-          // when window width is >= 1536px
-          1536: {
-            slidesPerView: 7,
-          },
-          // when window width is >= 1920px
-          1920: {
-            slidesPerView: 8,
-          },
-          // when window width is >= 2560px
-          2560: {
-            slidesPerView: 9,
-          },
-        }}
         className="rounded-3xl"
       >
         {categories.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="w-fit">
             <div className="relative h-36 w-36">
               <img
                 src={item.image}
