@@ -2,6 +2,7 @@ import "./App.css";
 import { Carousel } from "./layouts/Carousel";
 import { NavigationBar } from "./layouts/NavigationBar";
 import { CategoryCarousel } from "./layouts/CategoryCarousel";
+import { ProductSection } from "./layouts/ProductSection";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavigationBar />
       <Carousel />
       <CategoryCarousel />
+      <ProductSection />
     </div>
   );
 }
