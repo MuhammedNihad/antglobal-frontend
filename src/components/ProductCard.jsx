@@ -18,7 +18,7 @@ export const ProductCard = ({ name, image, altText }) => {
         src={image}
         width={250}
       />
-      <CardFooter className="absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
+      <CardFooter className="inset-x-1px absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-3xl border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
         <p className="line-clamp-2 text-base font-semibold text-white/80 lg:text-sm">
           {name}
         </p>
