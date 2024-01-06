@@ -88,7 +88,7 @@ export const CategoryCarousel = () => {
   const swiper = useSwiper();
 
   return (
-    <section className="flex flex-row gap-8 rounded-3xl bg-accent-200 p-3 lg:px-10">
+    <section className="mb-3 flex flex-row gap-8 rounded-3xl bg-accent-200 p-3 lg:px-10">
       <div className="flex flex-col items-center justify-center gap-3">
         <h3 className="text-dark-600 flex flex-col space-y-1 text-lg font-bold capitalize leading-6">
           <span>Browse</span>
