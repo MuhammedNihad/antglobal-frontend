@@ -90,7 +90,7 @@ export const CategoryCarousel = () => {
   return (
     <section className="mb-3 flex flex-row gap-8 rounded-3xl bg-accent-200 p-3 lg:px-10">
       <div className="flex flex-col items-center justify-center gap-3">
-        <h3 className="text-dark-600 flex flex-col space-y-1 text-lg font-bold capitalize leading-6">
+        <h3 className="text-dark-600 flex flex-col space-y-1 text-lg font-bold uppercase leading-6">
           <span>Browse</span>
           <span>by</span>
           <span>category</span>
