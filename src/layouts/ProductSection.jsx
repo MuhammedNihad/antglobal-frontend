@@ -1,4 +1,5 @@
 import { ProductCard } from "../components/ProductCard";
+import { ProductPagination } from "../components/ProductPagination";
 
 export const ProductSection = () => {
   // TODO: replace placeholder images
@@ -70,6 +71,7 @@ export const ProductSection = () => {
           />
         ))}
       </div>
+      <ProductPagination />
     </section>
   );
 };
