@@ -6,5 +6,14 @@ import { Pagination } from "@nextui-org/react";
  * @return {JSX.Element} The rendered pagination component.
  */
 export const ProductPagination = () => {
-  return <Pagination total={15} initialPage={1} />;
+  return (
+    <Pagination
+      showControls
+      showShadow
+      radius="full"
+      classNames={{ cursor: "bg-accent-950" }}
+      total={15}
+      initialPage={1}
+    />
+  );
 };
