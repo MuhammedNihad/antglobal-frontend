@@ -13,7 +13,7 @@ export const ProductCard = ({ name, image, altText }) => {
     <Card isFooterBlurred className="group rounded-3xl border-none">
       <Image
         alt={altText}
-        className="relative object-cover"
+        className="relative object-cover hover:scale-105"
         height={250}
         src={image}
         width={250}
