@@ -98,22 +98,22 @@ export const CategoryCarousel = () => {
         <div className="inline-flex gap-1">
           <button
             onClick={() => swiper.slidePrev()}
-            className="swiper-button-prev group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-black"
+            className="swiper-button-prev group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-accent-950"
           >
             <ArrowLeft
               size={20}
               alt="Previous button of categories"
-              className="text-black group-hover:text-white"
+              className="text-accent-950 group-hover:text-white"
             />
           </button>
           <button
             onClick={() => swiper.slideNext()}
-            className="swiper-button-next group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-black"
+            className="swiper-button-next group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-accent-950"
           >
             <ArrowRight
               size={20}
               alt="Next button of categories"
-              className="text-black group-hover:text-white"
+              className="text-accent-950 group-hover:text-white"
             />
           </button>
         </div>
@@ -132,7 +132,7 @@ export const CategoryCarousel = () => {
       >
         {categories.map((item, index) => (
           <SwiperSlide key={index} className="w-fit">
-            <div className="relative h-36 w-36">
+            <div className="group relative h-36 w-36">
               <img
                 src={item.image}
                 alt={item.alt}
@@ -140,10 +140,11 @@ export const CategoryCarousel = () => {
                 width={150}
                 className="h-36 w-36 rounded-3xl object-cover"
               />
-              <div className="absolute right-2 top-2 inline-flex items-center rounded-3xl bg-white p-2 shadow-md">
+              <div className="absolute right-2 top-2 inline-flex items-center rounded-3xl bg-white p-2 shadow-md group-hover:bg-accent-950">
                 <ArrowUpRight
                   size={20}
                   alt="Arrow up icon on category item image"
+                  className="text-accent-950 group-hover:text-white"
                 />
               </div>
             </div>
