@@ -7,7 +7,7 @@ import { Footer } from "./layouts/Footer";
 
 function App() {
   return (
-    <div className="m-3 lg:mx-10">
+    <div className="bg-primary-50 p-3 lg:px-10">
       <NavigationBar />
       <Carousel />
       <CategoryCarousel />
