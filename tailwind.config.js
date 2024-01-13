@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Bricolage Grotesque", "sans-serif"],
+      },
       colors: {
         primary: {
           50: "#fbf8f1",
