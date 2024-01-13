@@ -14,9 +14,9 @@ export const ProductCard = ({ name, image, altText }) => {
       <Image
         alt={altText}
         className="relative object-cover hover:scale-105"
-        height={250}
+        height={240}
         src={image}
-        width={250}
+        width={240}
       />
       <div className="absolute right-2 top-2 z-10 inline-flex items-center rounded-3xl bg-white p-2 shadow-md group-hover:bg-accent-950">
         <ArrowUpRight
