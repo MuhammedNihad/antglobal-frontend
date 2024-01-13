@@ -31,7 +31,7 @@ export const NavigationBar = () => {
       onMenuOpenChange={setIsMenuOpen}
       className="mb-3 rounded-3xl bg-secondary-400"
       classNames={{
-        wrapper: ["px-4"],
+        wrapper: ["px-4 lg:px-0"],
       }}
     >
       <NavbarContent className="gap-2 md:gap-3" justify="end">
@@ -47,7 +47,7 @@ export const NavigationBar = () => {
             height={60}
             className="flex min-w-[50px]"
           />
-          <p className="hidden text-xl font-bold uppercase text-accent-950 md:flex">
+          <p className="hidden text-7xl font-bold uppercase text-accent-950 md:flex">
             Ant Global
           </p>
         </NavbarBrand>
