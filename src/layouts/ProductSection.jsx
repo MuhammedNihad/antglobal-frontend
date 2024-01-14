@@ -1,5 +1,7 @@
+import { Button } from "@nextui-org/react";
+import { ArrowUpRight } from "@phosphor-icons/react";
+
 import { ProductCard } from "../components/ProductCard";
-import { ProductPagination } from "../components/ProductPagination";
 
 export const ProductSection = () => {
   // TODO: replace placeholder images
@@ -85,7 +87,15 @@ export const ProductSection = () => {
           />
         ))}
       </div>
-      <ProductPagination />
+      <div className="flex justify-center p-3">
+        <Button
+          className="rounded-3xl bg-accent-950 uppercase text-primary-50"
+          size="lg"
+          endContent={<ArrowUpRight size={20} />}
+        >
+          View all
+        </Button>
+      </div>
     </section>
   );
 };
