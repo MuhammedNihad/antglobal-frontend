@@ -1,3 +1,4 @@
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { ArrowUpRight, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -130,22 +131,31 @@ export const CategoryCarousel = () => {
       >
         {categories.map((item, index) => (
           <SwiperSlide key={index} className="w-fit">
-            <div className="group relative h-36 w-36">
-              <img
-                src={item.image}
-                alt={item.alt}
-                height={150}
-                width={150}
-                className="h-36 w-36 rounded-3xl object-cover"
-              />
-              <div className="absolute right-2 top-2 inline-flex items-center rounded-3xl bg-white p-2 shadow-md group-hover:bg-accent-950">
-                <ArrowUpRight
-                  size={20}
-                  alt="Arrow up icon on category item image"
-                  className="text-accent-950 group-hover:text-white"
+            <Card
+              className="w-36 rounded-3xl"
+              shadow="none"
+              isPressable
+              key={index}
+              onPress={() => console.log("item pressed")}
+            >
+              <CardBody className="group relative overflow-visible rounded-3xl p-0">
+                <Image
+                  className="h-36 w-36 rounded-3xl object-cover"
+                  alt={item.alt}
+                  src={item.image}
                 />
-              </div>
-            </div>
+                <div className="absolute right-2 top-2 z-10 inline-flex items-center rounded-3xl bg-white p-2 shadow-md group-hover:bg-accent-950">
+                  <ArrowUpRight
+                    size={20}
+                    alt="Arrow up icon on category item image"
+                    className="text-accent-950 group-hover:text-white"
+                  />
+                </div>
+              </CardBody>
+              <CardFooter className="justify-start text-small">
+                <b className="line-clamp-1 text-accent-950">{item.title}</b>
+              </CardFooter>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>
