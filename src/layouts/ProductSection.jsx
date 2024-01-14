@@ -58,8 +58,22 @@ export const ProductSection = () => {
 
   return (
     <section className="mb-3 gap-4 rounded-3xl bg-secondary-300 p-3 lg:px-10">
-      <h3 className="flex items-center justify-center gap-1 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
+      <h3 className="flex items-center justify-center gap-3 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
         Explore our products
+        <svg
+          className="w-20 sm:w-8 md:w-9"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 200 200"
+          version="1.1"
+        >
+          <path
+            fill="rgba(23, 39, 110, 1)"
+            fillRule="evenodd"
+            d="M120 0H80v51.716L43.431 15.147 15.148 43.431 51.716 80H0v40h51.716l-36.569 36.568 28.285 28.285L80 148.284V200h40v-51.716l36.569 36.569 28.284-28.284L148.284 120H200V80h-51.716l36.569-36.569-28.284-28.284L120 51.716V0Z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
       </h3>
       <div className="flex flex-row flex-wrap justify-center gap-4">
         {products.map((item, index) => (
