@@ -14,6 +14,7 @@ export const ProductPagination = () => {
       classNames={{ cursor: "bg-accent-950" }}
       total={15}
       initialPage={1}
+      className="flex justify-center"
     />
   );
 };

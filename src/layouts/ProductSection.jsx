@@ -57,9 +57,9 @@ export const ProductSection = () => {
   ];
 
   return (
-    <section className="mb-3 flex flex-row flex-wrap justify-center gap-4 rounded-3xl bg-secondary-300 p-3 lg:px-10">
-      <h3 className="flex flex-col space-y-1 p-4 text-lg font-bold uppercase leading-6 text-accent-950">
-        explore our products
+    <section className="mb-3 gap-4 rounded-3xl bg-secondary-300 p-3 lg:px-10">
+      <h3 className="flex items-center justify-center gap-1 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
+        Explore our products
       </h3>
       <div className="flex flex-row flex-wrap justify-center gap-4">
         {products.map((item, index) => (
