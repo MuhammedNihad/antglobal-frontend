@@ -1,19 +1,13 @@
+import { RouterProvider } from "react-router-dom";
+
 import "./App.css";
-import { Carousel } from "./layouts/Carousel";
-import { NavigationBar } from "./layouts/NavigationBar";
-import { CategoryCarousel } from "./layouts/CategoryCarousel";
-import { ProductSection } from "./layouts/ProductSection";
-import { Footer } from "./layouts/Footer";
+import router from "./routes/Index";
 
 function App() {
   return (
-    <div className="bg-primary-50 p-3 lg:px-10">
-      <NavigationBar />
-      <Carousel />
-      <CategoryCarousel />
-      <ProductSection />
-      <Footer />
-    </div>
+    <main>
+      <RouterProvider router={router} />
+    </main>
   );
 }
 
