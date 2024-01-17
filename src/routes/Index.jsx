@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Layout } from "../layouts/Index";
 import { ErrorPage } from "../pages/ErrorPage";
+import { ProductList } from "../layouts/ProductList";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage statusCode={400} />,
     children: [
       { path: "", element: <Home /> },
+      { path: "products", element: <ProductList /> },
       { path: "*", element: <ErrorPage statusCode={404} /> },
     ],
   },
