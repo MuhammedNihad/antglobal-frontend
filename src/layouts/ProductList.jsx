@@ -1,9 +1,43 @@
-import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
-import { House, Tag } from "@phosphor-icons/react";
+import {
+  Breadcrumbs,
+  BreadcrumbItem,
+  Select,
+  SelectItem,
+} from "@nextui-org/react";
+import { House, Tag, SquaresFour } from "@phosphor-icons/react";
 
 import { ProductCard } from "../components/ProductCard";
 
 export const ProductList = () => {
+  const categories = [
+    {
+      title: "Laptops",
+    },
+    {
+      title: "Tablets",
+    },
+    {
+      title: "Bags",
+    },
+    {
+      title: "Cameras",
+    },
+    {
+      title: "Sports",
+    },
+    {
+      title: "Headphones",
+    },
+    {
+      title: "Speakers",
+    },
+    {
+      title: "Power Tools",
+    },
+    {
+      title: "Gadgets",
+    },
+  ];
   const products = [
     {
       name: "Asus Tuf A15 Gaming Laptop",
@@ -95,6 +129,30 @@ export const ProductList = () => {
           ></path>
         </svg>
       </h3>
+      <div className="flex justify-end px-4 pb-3">
+        <Select
+          size="sm"
+          radius="lg"
+          label="Choose category"
+          startContent={<SquaresFour size={24} />}
+          className="max-w-xs text-accent-950"
+          classNames={{
+            trigger: "bg-secondary-200",
+            label: "!text-accent-950",
+            value: "!text-accent-950 font-bold text-md",
+          }}
+        >
+          {categories.map((category) => (
+            <SelectItem
+              key={category.title}
+              value={category.title}
+              className="text-accent-950"
+            >
+              {category.title}
+            </SelectItem>
+          ))}
+        </Select>
+      </div>
       <div className="flex flex-row flex-wrap justify-center gap-4">
         {products.map((item, index) => (
           <ProductCard
