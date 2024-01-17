@@ -1,3 +1,6 @@
+import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
+import { House, Tag } from "@phosphor-icons/react";
+
 import { ProductCard } from "../components/ProductCard";
 
 export const ProductList = () => {
@@ -56,6 +59,23 @@ export const ProductList = () => {
 
   return (
     <section className="mb-3 rounded-3xl bg-secondary-300 p-5 lg:px-10">
+      <Breadcrumbs
+        className="flex justify-end rounded-3xl pr-4 text-accent-950"
+        variant="solid"
+        radius="lg"
+        underline="hover"
+        itemClasses={{
+          base: "!text-accent-950",
+          item: "!text-accent-950",
+          separator: "!text-accent-950",
+        }}
+        classNames={{
+          list: "bg-secondary-200",
+        }}
+      >
+        <BreadcrumbItem startContent={<House />}>Home</BreadcrumbItem>
+        <BreadcrumbItem startContent={<Tag />}>Products</BreadcrumbItem>
+      </Breadcrumbs>
       <h3 className="flex items-center justify-center gap-3 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
         Explore our products
         <svg
