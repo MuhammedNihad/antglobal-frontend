@@ -7,6 +7,7 @@ import {
 import { House, Tag, SquaresFour } from "@phosphor-icons/react";
 
 import { ProductCard } from "../components/ProductCard";
+import { ProductPagination } from "../components/ProductPagination";
 
 export const ProductList = () => {
   const categories = [
@@ -162,6 +163,7 @@ export const ProductList = () => {
             altText={item.alt_text}
           />
         ))}
+        <ProductPagination />
       </div>
     </section>
   );
