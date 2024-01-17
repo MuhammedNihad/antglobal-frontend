@@ -73,7 +73,9 @@ export const ProductList = () => {
           list: "bg-secondary-200",
         }}
       >
-        <BreadcrumbItem startContent={<House />}>Home</BreadcrumbItem>
+        <BreadcrumbItem href="/" startContent={<House />}>
+          Home
+        </BreadcrumbItem>
         <BreadcrumbItem startContent={<Tag />}>Products</BreadcrumbItem>
       </Breadcrumbs>
       <h3 className="flex items-center justify-center gap-3 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
