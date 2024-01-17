@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@nextui-org/react";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
@@ -58,6 +59,8 @@ export const ProductSection = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <section className="mb-3 gap-4 rounded-3xl bg-secondary-300 p-3 lg:px-10">
       <h3 className="flex items-center justify-center gap-3 space-y-1 p-4 text-4xl font-bold uppercase leading-8 text-accent-950 sm:text-5xl md:justify-end">
@@ -92,6 +95,7 @@ export const ProductSection = () => {
           className="rounded-3xl bg-accent-950 uppercase text-primary-50"
           size="lg"
           endContent={<ArrowUpRight size={20} />}
+          onPress={() => navigate("/products")}
         >
           View all
         </Button>
