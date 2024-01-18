@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs, Zoom } from "swiper/modules";
 import { Image } from "@nextui-org/react";
+import { House, Tag } from "@phosphor-icons/react";
 
 export const ProductDetail = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -26,7 +28,30 @@ export const ProductDetail = () => {
 
   return (
     <section className="mb-3 rounded-3xl bg-secondary-300 p-5 lg:px-10">
-      <div className="flex flex-row flex-wrap justify-center gap-12 md:gap-20 lg:gap-28">
+      <Breadcrumbs
+        className="flex justify-end rounded-3xl text-accent-950"
+        variant="solid"
+        radius="lg"
+        underline="hover"
+        itemClasses={{
+          base: "!text-accent-950",
+          item: "!text-accent-950",
+          separator: "!text-accent-950",
+        }}
+        classNames={{
+          list: "bg-secondary-200",
+        }}
+      >
+        <BreadcrumbItem href="/" startContent={<House />}>
+          Home
+        </BreadcrumbItem>
+        <BreadcrumbItem href="/products" startContent={<Tag />}>
+          Products
+        </BreadcrumbItem>
+        <BreadcrumbItem>Product name </BreadcrumbItem>
+      </Breadcrumbs>
+
+      <div className="flex flex-row flex-wrap justify-center gap-12 p-4 md:gap-20 lg:gap-28">
         <div className="flex flex-col gap-[5px]">
           <Swiper
             zoom
