@@ -70,7 +70,13 @@ export const ProductDetail = () => {
             freeMode
             watchSlidesProgress
             spaceBetween={5}
-            slidesPerView={4}
+            slidesPerView={3}
+            breakpoints={{
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 4,
+              },
+            }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="w-72 rounded-2xl sm:w-80 md:w-96 md:rounded-3xl lg:w-[28rem]"
           >
