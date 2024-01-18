@@ -8,6 +8,8 @@ import { House, Tag } from "@phosphor-icons/react";
 export const ProductDetail = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const productName = "This is a product name which has very long characters";
+
   const productImages = [
     {
       src: "https://placehold.co/500x500/17276e/white/png",
@@ -48,7 +50,11 @@ export const ProductDetail = () => {
         <BreadcrumbItem href="/products" startContent={<Tag />}>
           Products
         </BreadcrumbItem>
-        <BreadcrumbItem>Product name </BreadcrumbItem>
+        <BreadcrumbItem>
+          {productName.length > 40
+            ? `${productName.slice(0, 40).trim()}...`
+            : productName}
+        </BreadcrumbItem>
       </Breadcrumbs>
 
       <div className="flex flex-row flex-wrap justify-center gap-12 p-4 md:gap-20 lg:gap-28">
