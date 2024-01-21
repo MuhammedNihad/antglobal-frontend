@@ -67,6 +67,7 @@ export const ProductDetail = () => {
             thumbs={{
               swiper:
                 thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+              slideThumbActiveClass: "swiper-slide-thumb-active-outline",
             }}
             modules={[FreeMode, Navigation, Thumbs, Zoom]}
             className="w-72 rounded-3xl sm:w-80 md:w-96 lg:w-[28rem]"
@@ -88,7 +89,7 @@ export const ProductDetail = () => {
             loop
             freeMode
             watchSlidesProgress
-            spaceBetween={5}
+            spaceBetween={7}
             slidesPerView={3}
             breakpoints={{
               // when window width is >= 768px
@@ -97,7 +98,7 @@ export const ProductDetail = () => {
               },
             }}
             modules={[FreeMode, Navigation, Thumbs]}
-            className="w-72 rounded-2xl sm:w-80 md:w-96 md:rounded-3xl lg:w-[28rem]"
+            className="w-72 rounded-2xl p-[5px] sm:w-80 md:w-96 md:rounded-3xl lg:w-[28rem]"
           >
             {productImages.map((item, index) => (
               <SwiperSlide className="rounded-2xl md:rounded-3xl" key={index}>

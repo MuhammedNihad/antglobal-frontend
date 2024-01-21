@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+  Style for the outline of the active/selected thumb image in the product image gallery.
+  This class is used as a part of the 'slideThumbActiveClass' parameter for Swiper,
+  which only accepts a single class. TailwindCSS requires multiple classes for this outline style.*/
+
+.swiper-slide-thumb-active-outline {
+  outline: 4px solid #17276e;
+}
