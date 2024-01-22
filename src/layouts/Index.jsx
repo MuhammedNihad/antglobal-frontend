@@ -6,7 +6,10 @@ import { Footer } from "./Footer";
 export const Layout = () => {
   const navigate = useNavigate();
   return (
-    <NextUIProvider navigate={navigate} className="bg-primary-50 p-3 lg:px-10">
+    <NextUIProvider
+      navigate={navigate}
+      className="min-h-screen bg-primary-100 p-3 lg:px-10"
+    >
       <ScrollRestoration />
       <NavigationBar />
       <Outlet />
