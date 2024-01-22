@@ -13,6 +13,7 @@ export default {
         sans: ["Bricolage Grotesque", "sans-serif"],
       },
       colors: {
+        "whatsapp-green": "#25d366",
         primary: {
           50: "#fbf8f1",
           100: "#f5eedf",
@@ -39,7 +40,6 @@ export default {
           900: "#4f4969",
           950: "#322f46",
         },
-
         accent: {
           50: "#ebf5ff",
           100: "#daedff",

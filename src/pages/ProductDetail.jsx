@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/react";
+import { BreadcrumbItem, Breadcrumbs, Chip } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs, Zoom } from "swiper/modules";
 import { Image } from "@nextui-org/react";
 import { House, Tag } from "@phosphor-icons/react";
+import { WhatsappEnquireNowButton } from "../components/WhatsappEnquireNowButton";
 
 export const ProductDetail = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -57,7 +58,7 @@ export const ProductDetail = () => {
         </BreadcrumbItem>
       </Breadcrumbs>
 
-      <div className="flex flex-row flex-wrap justify-center gap-12 p-4 md:gap-20 lg:gap-28">
+      <div className="flex flex-row flex-wrap justify-center gap-12 py-4 md:flex-nowrap md:gap-20 lg:gap-28">
         <div className="flex flex-col gap-[5px]">
           <Swiper
             zoom
@@ -106,6 +107,26 @@ export const ProductDetail = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className="flex flex-col justify-start gap-4 rounded-3xl bg-secondary-400 p-8 lg:pt-10">
+          <Chip className="bg-secondary-300 font-bold text-accent-950">
+            Brand name
+          </Chip>
+          <div className="text-4xl font-bold text-accent-950">
+            {productName}
+          </div>
+          <div className="text-xl font-semibold text-accent-950">In Stock</div>
+          <WhatsappEnquireNowButton />
+          <div className="mt-4 border-t-4 border-secondary-300 pt-2 text-accent-950">
+            <div className="text-md font-semibold">Description</div>
+            <p>
+              Product description goes here Quam, architecto quaerat explicabo
+              iusto labore dolorem sint error reiciendis quasi! Vitae quam minus
+              eos praesentium voluptatum earum. Omnis, voluptatem totam? Sunt,
+              quod vel sequi quaerat soluta quasi explicabo ea aliquam tenetur
+              deserunt voluptas.
+            </p>
+          </div>
         </div>
       </div>
     </section>
