@@ -30,12 +30,12 @@ export const ProductCard = ({ name, image, altText }) => {
           {name}
         </p>
         <Button
-          className="rounded-3xl bg-black/20 text-tiny text-white"
+          className="rounded-3xl bg-whatsapp-green text-tiny text-white"
           variant="flat"
           color="default"
           size="sm"
         >
-          <WhatsappLogo size={24} color="#25d366" />
+          <WhatsappLogo size={24} />
         </Button>
       </CardFooter>
     </Card>
