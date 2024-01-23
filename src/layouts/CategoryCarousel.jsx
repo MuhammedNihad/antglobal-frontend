@@ -136,7 +136,6 @@ export const CategoryCarousel = () => {
               shadow="none"
               isPressable
               key={index}
-              onPress={() => console.log("item pressed")}
             >
               <CardBody className="group relative overflow-visible rounded-3xl p-0">
                 <Image
