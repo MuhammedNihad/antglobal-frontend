@@ -9,14 +9,21 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "format": "prettier --write ./src",
+    "format": "prettier --write .",
     "lint-staged": "lint-staged --config lint-staged.cjs"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
+    "@phosphor-icons/react": "^2.0.15",
+    "framer-motion": "^10.16.16",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.2",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -29,7 +36,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.32",
-    "prettier": "3.1.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.10",
     "tailwindcss": "^3.3.6",
     "vite": "^5.0.0"
   }
