@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { ArrowUpRight, ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -88,6 +89,14 @@ export const CategoryCarousel = () => {
   ];
   const swiper = useSwiper();
 
+  const handleSlidePrev = useCallback(() => {
+    swiper.slidePrev();
+  }, [swiper]);
+
+  const handleSlideNext = useCallback(() => {
+    swiper.slideNext();
+  }, [swiper]);
+
   return (
     <section className="mb-3 rounded-3xl bg-secondary-300 p-5 lg:px-10">
       <div className="flex flex-row items-center justify-end gap-3 pb-3">
@@ -96,7 +105,7 @@ export const CategoryCarousel = () => {
         </h3>
         <div className="inline-flex gap-1">
           <button
-            onClick={() => swiper.slidePrev()}
+            onClick={handleSlidePrev}
             className="swiper-button-prev group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-accent-950"
           >
             <ArrowLeft
@@ -106,7 +115,7 @@ export const CategoryCarousel = () => {
             />
           </button>
           <button
-            onClick={() => swiper.slideNext()}
+            onClick={handleSlideNext}
             className="swiper-button-next group right-2 top-2 items-center rounded-3xl bg-white p-2 shadow-md hover:bg-accent-950"
           >
             <ArrowRight

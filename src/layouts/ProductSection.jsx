@@ -60,6 +60,9 @@ export const ProductSection = () => {
   ];
 
   const navigate = useNavigate();
+  const navigateToProducts = () => {
+    navigate("/products");
+  };
 
   return (
     <section className="mb-3 gap-4 rounded-3xl bg-secondary-300 p-3 lg:px-10">
@@ -95,7 +98,7 @@ export const ProductSection = () => {
           className="rounded-3xl bg-accent-950 uppercase text-primary-50"
           size="lg"
           endContent={<ArrowUpRight size={20} />}
-          onPress={() => navigate("/products")}
+          onPress={navigateToProducts}
         >
           View all
         </Button>
