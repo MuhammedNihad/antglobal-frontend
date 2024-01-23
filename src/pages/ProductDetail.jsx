@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { BreadcrumbItem, Breadcrumbs, Chip } from "@nextui-org/react";
+import { BreadcrumbItem, Breadcrumbs, Chip, Image } from "@nextui-org/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs, Zoom } from "swiper/modules";
-import { Image } from "@nextui-org/react";
 import { House, Tag } from "@phosphor-icons/react";
 import { WhatsappEnquireNowButton } from "../components/WhatsappEnquireNowButton";
 
