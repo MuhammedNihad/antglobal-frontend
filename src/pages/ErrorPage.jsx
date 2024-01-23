@@ -4,25 +4,31 @@ import { ClientErrorSVG } from "../components/ErrorSvgs/ClientErrorSVG";
 import { ServerErrorSVG } from "../components/ErrorSvgs/ServerErrorSVG";
 
 export const ErrorPage = ({ statusCode }) => {
-  let errorMessage, errorDescription;
-
   // Set error message and description based on the error code
-  switch (statusCode) {
-    case 400:
-      errorMessage = "400 - Bad Request";
-      errorDescription =
-        "Oops..! The server cannot process the request due to the client error.";
-      break;
-    case 404:
-      errorMessage = "404 - Page not found";
-      errorDescription =
-        "Oops..! The page you are looking for doesn't exist or has been removed.";
-      break;
-    default:
-      errorMessage = "500 - Internal Server Error";
-      errorDescription =
-        "Oops..! An unexpected condition was encountered on the server. Try to refresh this page or feel free to contact us if the problem persists.";
-  }
+  const getErrorDetails = () => {
+    switch (statusCode) {
+      case 400:
+        return {
+          errorMessage: "400 - Bad Request",
+          errorDescription:
+            "Oops..! The server cannot process the request due to the client error.",
+        };
+      case 404:
+        return {
+          errorMessage: "404 - Page not found",
+          errorDescription:
+            "Oops..! The page you are looking for doesn't exist or has been removed.",
+        };
+      default:
+        return {
+          errorMessage: "500 - Internal Server Error",
+          errorDescription:
+            "Oops..! An unexpected condition was encountered on the server. Try to refresh this page or feel free to contact us if the problem persists.",
+        };
+    }
+  };
+
+  const { errorMessage, errorDescription } = getErrorDetails();
 
   return (
     <div className="mb-3 flex min-h-[calc(100vh-250px)] w-full items-center justify-center rounded-3xl bg-secondary-300 p-5">
