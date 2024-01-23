@@ -5,6 +5,7 @@ import { Layout } from "../layouts/Index";
 import { ErrorPage } from "../pages/ErrorPage";
 import { ProductList } from "../pages/ProductList";
 import { ProductDetail } from "../pages/ProductDetail";
+import { SearchResult } from "../pages/SearchResult";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "", element: <Home /> },
       { path: "products", element: <ProductList /> },
       { path: "products/:slug", element: <ProductDetail /> },
+      { path: "search", element: <SearchResult /> },
       { path: "*", element: <ErrorPage statusCode={404} /> },
     ],
   },
