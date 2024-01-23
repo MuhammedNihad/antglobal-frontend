@@ -14,12 +14,12 @@ import "swiper/css/pagination";
 export const Carousel = () => {
   return (
     <Swiper
+      loop
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
-      loop={true}
       modules={[Autoplay, Pagination]}
       style={{
         "--swiper-pagination-color": "#fff",
